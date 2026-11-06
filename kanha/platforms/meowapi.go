@@ -94,9 +94,9 @@ func (m *MeowApiPlatform) Download(
 	path := getPath(track, ext)
 
 	streamURL := fmt.Sprintf(
-		"%s/stream/%s?key=%s&type=%s&quality=%s",
-		config.MeowAPIURL, track.ID, config.MeowAPIKey, dtype, quality,
-	)
+    "%s/stream/%s?key=%s&type=%s&quality=%s",
+    config.MeowAPIURL, track.ID, config.MeowAPIKey, dtype, quality,
+)
 	switch track.Source {
 	case PlatformSpotify:
 		streamURL = fmt.Sprintf("%s/stream/spotify/%s?key=%s", config.MeowAPIURL, track.ID, config.MeowAPIKey)
